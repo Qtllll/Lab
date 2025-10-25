@@ -17,9 +17,6 @@ sudo ln -s /opt/gcc-12.1.0/bin/gcc /usr/bin/gcc-12.1.0
 gcc-12.1.0 --version
 ```
 
-输出如图表示配置成功：
-
-![image-20251018094038106](/Users/qiaotianlu/Library/Application Support/typora-user-images/image-20251018094038106.png)
 
 ## 统一命名配置llvm环境
 
@@ -30,9 +27,6 @@ sudo apt install clang-12 llvm-12
 sudo ln -s /opt/llvm-12.0.1/bin/clang /usr/bin/clang-12.0.1
 ```
 
-输出如图表示配置成功：
-
-![image-20251018094231291](/Users/qiaotianlu/Library/Application Support/typora-user-images/image-20251018094231291.png)
 
 ## 代码克隆本地
 
@@ -71,7 +65,7 @@ python3 main.py --compiler <编译器版本> --algorithm <优化算法> --progra
 
 `--flags_file`:允许用户加载预定义的优化选项文件（如flags.txt），以限定优化参数搜索空间。
 
-**基础优化任务运行测试用例：**可以直接指定编译器、算法与目标程序即可启动。
+**基础优化任务运行测试用例：** 可以直接指定编译器、算法与目标程序即可启动。
 
 例如对example.c程序使用GCC-12.1.0编译器和RIO算法时：
 
@@ -79,11 +73,9 @@ python3 main.py --compiler <编译器版本> --algorithm <优化算法> --progra
 python3 main.py --compiler gcc-12.1.0 --algorithm RIO --program example.c
 ```
 
-出现截图所示，并且不报错，即为运行成功：
 
-![image-20251018102036188](/Users/qiaotianlu/Library/Application Support/typora-user-images/image-20251018102036188.png)
 
-**复杂编译环境运行测试用例：**若程序依赖第三方头文件库，可通过`--include_path`添加包含路径：
+**复杂编译环境运行测试用例：** 若程序依赖第三方头文件库，可通过`--include_path`添加包含路径：
 
 ```bash 
 python3 main.py \
