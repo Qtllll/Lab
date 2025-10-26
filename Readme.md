@@ -99,11 +99,6 @@ python3 main.py \
   --flags_file /home/qtl/test/flag.txt
 ```
 
-**查询数据库数据：** 系统将自动记录优化结果至SQLite数据库（默认文件名为`optimization_results.db`），存储字段涵盖编译器版本、目标程序名称、最优编译参数集合、程序实际运行时间及相对于-O3基准的加速比提升百分比。
 
-例如，当用户优化test.c程序后，可通过终端执行命令 ,直接查询该程序的历史优化记录: 
 
-```bash
-sqlite3 optimization_results.db “SELECT * FROM optimization_results WHERE program_path=’test.c’;”
-```
 
